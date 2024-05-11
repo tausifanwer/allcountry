@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  --background-color:white;
+  --text-color:black;
+  --elements-color:white;
+
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+}
+
+.dark{
+  --background-color:hsl(207,26%,17%);
+  --text-color:white;
+  --elements-color:hsl(207,26%,17%);
+}
+
+
+main {
+  padding: 24px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.header-container {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--elements-color);
+}
+.header-container p{
+  cursor: pointer;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+.title {
+  font-weight: 800;
+}
+.search-filter-container {
+  margin-inline: auto;
+  max-width: 1200px;
+  margin-top: 16px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-container {
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+  border-radius: 4px;
+  padding-left: 24px;
+  color: rgba(128, 128, 128, 0.534);
+  overflow: hidden;
+  background-color: var(--elements-color);
+  color:var(--text-color);
+}
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  padding-left: 12px;
+  width: 90%;
+  background-color: inherit;
+  color:inherit;
+}
+.search-container input::placeholder {
+  color: rgba(128, 128, 128, 0.534);
+}
+.continent {
+  width: 150px;
+  padding-inline: 16px;
+  border: none;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 6px;
+  background-color: var(--elements-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+.continent option {
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  background-color: var(--elements-color);
+  color: var(--text-color);
+}
+.countries-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 16px;
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.country-card {
+  display: inline-block;
+  margin-top: 16px;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 4px;
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  background-color: var(--elements-color);
+}
+.country-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+  width: 100%;
+}
+.card-text {
+  padding-inline: 16px;
+}
+.card-text p {
+  margin-block: 8px;
+}
+.card-title {
+  font-size: 24px;
+  margin-block: 16px;
+}
+footer{
+  box-shadow: 0px -4px 10px 1px rgba(0, 0, 0, 0.1);
+ 
+}
+.owner{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding-inline: 24px;
+  margin-inline: auto;
+ 
+}
+
+@media screen and (max-width: 840px) {
+  .title {
+    font-size: 16px;
+  }
+  .header-content p {
+    font-size: 12px;
+  }
+  .countries-container {
+    justify-content: center;
+  }
+  .search-filter-container {
+    flex-direction: column;
+  }
+  .continent {
+    margin-top: 12px;
+    padding-block: 12px;
+  }
+  .owner p{
+    font-size: xx-small;
+  }
+}
